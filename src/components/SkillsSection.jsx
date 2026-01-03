@@ -3,28 +3,33 @@ import { cn } from "@/lib/utils";
 
 const skills = [
   // Frontend
-  { name: "HTML/CSS", level: 95, category: "teaching" },
-  { name: "JavaScript", level: 90, category: "frontend" },
+  { name: "HTML/CSS", level: 95, category: "frontend" },
+  { name: "JavaScript", level: 80, category: "frontend" },
   { name: "React", level: 90, category: "frontend" },
-  { name: "TypeScript", level: 85, category: "frontend" },
+  { name: "Bootstrap", level: 85, category: "frontend" },
   { name: "Tailwind CSS", level: 90, category: "frontend" },
-  { name: "Next.js", level: 80, category: "frontend" },
+  { name: ".....", level: 80, category: "frontend" },
 
   // Backend
-  { name: "Node.js", level: 80, category: "backend" },
+  { name: "DSA", level: 80, category: "backend" },
   { name: "Express", level: 75, category: "backend" },
   { name: "MongoDB", level: 70, category: "backend" },
   { name: "PostgreSQL", level: 65, category: "backend" },
   { name: "GraphQL", level: 60, category: "backend" },
 
-  // Tools
-  { name: "Git/GitHub", level: 90, category: "tools" },
-  { name: "Docker", level: 70, category: "tools" },
-  { name: "Figma", level: 85, category: "tools" },
-  { name: "VS Code", level: 95, category: "tools" },
+  // STUDY
+  { name: "JAVA DSA", level: 0, category: "study" },
+  { name: "PYTHON AI", level: 0, category: "study" },
+  { name: "REST API", level: 0, category: "study" },
+  { name: "CLOUD", level: 0, category: "study" },
+  { name: "DEVOPS", level: 0, category: "study" },
+  { name: "DJANGO", level: 0, category: "study" },
+  { name: "SPRINGBOOT", level: 0, category: "study" },
+  { name: "AIRTABLE", level: 0, category: "study" },
+  { name: "N8N", level: 0, category: "study" },
 ];
 
-const categories = ["all", "frontend", "backend", "tools","teaching"];
+const categories = ["all", "frontend", "backend", "tools","study"];
 
 export const SkillsSection = () => {
   const [activeCategory, setActiveCategory] = useState("all");
