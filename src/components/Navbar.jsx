@@ -7,12 +7,14 @@ const navItems = [
   { name: "About", href: "#about" },
   { name: "Skills", href: "#skills" },
   { name: "Projects", href: "#projects" },
+  { name: "Gallery", href: "#gallery" },
   { name: "Contact", href: "#contact" },
 ];
 
 export const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isProfileModalOpen, setIsProfileModalOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -31,9 +33,34 @@ export const Navbar = () => {
     >
       <div className="container flex items-center justify-between">
         <a
-          className="text-xl font-bold text-primary flex items-center"
+          className="text-xl font-bold text-primary flex items-center gap-3"
           href="#hero"
+          onClick={(e) => {
+            // Prevent navigation if clicking on profile picture
+            if (e.target.tagName === 'IMG') {
+              e.preventDefault();
+            }
+          }}
         >
+          <div className="relative group">
+            <img
+              src="/profile.jpg"
+              alt="Edson Edwin Ninan"
+              className="w-10 h-10 rounded-full object-cover border-2 border-primary/50 cursor-pointer transition-transform duration-300 hover:scale-110 hover:border-primary"
+              onClick={(e) => {
+                e.stopPropagation();
+                setIsProfileModalOpen(true);
+              }}
+              onMouseEnter={() => setIsProfileModalOpen(true)}
+              onError={(e) => {
+                e.target.style.display = 'none';
+              }}
+            />
+            {/* Tooltip on hover */}
+            <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-2 py-1 bg-black/80 text-white text-xs rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none whitespace-nowrap">
+              Click to view profile
+            </div>
+          </div>
           <span className="relative z-10">
             <span className="text-glow text-foreground"> EDSON EDWIN NINAN </span>{" "}
                 (Software Engineer)
@@ -86,6 +113,41 @@ export const Navbar = () => {
           </div>
         </div>
       </div>
+
+      {/* Profile Picture Modal */}
+      {isProfileModalOpen && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 p-4"
+          onClick={() => setIsProfileModalOpen(false)}
+        >
+          <div className="relative max-w-2xl w-full flex flex-col items-center">
+            <button
+              onClick={() => setIsProfileModalOpen(false)}
+              className="absolute top-4 right-4 text-white hover:text-primary transition-colors z-10 bg-black/50 rounded-full p-2"
+              aria-label="Close"
+            >
+              <X size={24} />
+            </button>
+            <div className="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-primary/50 shadow-2xl">
+              <img
+                src="/profile.jpg"
+                alt="Edson Edwin Ninan"
+                className="w-full h-full object-cover"
+                onClick={(e) => e.stopPropagation()}
+                onError={(e) => {
+                  e.target.src = "https://via.placeholder.com/400x400?text=Profile+Image+Not+Found";
+                }}
+              />
+            </div>
+            <div className="mt-6 text-center">
+              <h3 className="text-2xl md:text-3xl font-bold text-white mb-2">
+                Edson Edwin Ninan
+              </h3>
+              <p className="text-primary text-lg">Software Engineer</p>
+            </div>
+          </div>
+        </div>
+      )}
     </nav>
   );
 };

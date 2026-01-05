@@ -8,6 +8,7 @@ import {
   Twitch,
   Twitter,
 } from "lucide-react";
+import { FaWhatsapp } from "react-icons/fa";
 import { cn } from "@/lib/utils";
 import { useToast } from "@/hooks/use-toast";
 import { useState } from "react";
@@ -163,17 +164,17 @@ export const ContactSection = () => {
             <div className="pt-8">
               <h4 className="font-medium mb-4"> Connect With Me</h4>
               <div className="flex space-x-4 justify-center">
-                <a href="#" target="_blank">
+                <a href="https://www.linkedin.com/in/edson-edwin-ninan-44073b381/" target="_blank">
                   <Linkedin />
                 </a>
                 <a href="#" target="_blank">
                   <Twitter />
                 </a>
-                <a href="#" target="_blank">
+                <a href="https://www.instagram.com/edson_edwin_ninan?utm_source=qr&igsh=MWI0NWp5Z2hqcXJ1bA==" target="_blank">
                   <Instagram />
                 </a>
-                <a href="#" target="_blank">
-                  <Twitch />
+                <a href="https://wa.me/qr/AU3FQ3U3QCMYK1" target="_blank">
+                <FaWhatsapp size={25} className="text-white" />
                 </a>
               </div>
             </div>

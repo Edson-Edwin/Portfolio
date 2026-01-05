@@ -3,19 +3,19 @@ import { cn } from "@/lib/utils";
 
 const skills = [
   // Frontend
-  { name: "HTML/CSS", level: 95, category: "frontend" },
-  { name: "JavaScript", level: 80, category: "frontend" },
-  { name: "React", level: 90, category: "frontend" },
-  { name: "Bootstrap", level: 85, category: "frontend" },
-  { name: "Tailwind CSS", level: 90, category: "frontend" },
-  { name: ".....", level: 80, category: "frontend" },
+  // { name: "HTML/CSS", level: 95, category: "frontend" },
+  // { name: "JavaScript", level: 80, category: "frontend" },
+  // { name: "React", level: 90, category: "frontend" },
+  // { name: "Bootstrap", level: 85, category: "frontend" },
+  // { name: "Tailwind CSS", level: 90, category: "frontend" },
+  // { name: ".....", level: 80, category: "frontend" },
 
-  // Backend
-  { name: "DSA", level: 80, category: "backend" },
-  { name: "Express", level: 75, category: "backend" },
-  { name: "MongoDB", level: 70, category: "backend" },
-  { name: "PostgreSQL", level: 65, category: "backend" },
-  { name: "GraphQL", level: 60, category: "backend" },
+  // // Backend
+  // { name: "DSA", level: 80, category: "backend" },
+  // { name: "Express", level: 75, category: "backend" },
+  // { name: "MongoDB", level: 70, category: "backend" },
+  // { name: "PostgreSQL", level: 65, category: "backend" },
+  // { name: "GraphQL", level: 60, category: "backend" },
 
   // STUDY
   { name: "JAVA DSA", level: 0, category: "study" },
