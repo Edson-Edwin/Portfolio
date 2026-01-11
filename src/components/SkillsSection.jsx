@@ -19,7 +19,7 @@ const skills = [
 
   // STUDY
   { name: "JAVA DSA", level: 0, category: "study" },
-  { name: "PYTHON AI", level: 0, category: "study" },
+  { name: "PYTHON AI", level: 5, category: "study" },
   { name: "REST API", level: 0, category: "study" },
   { name: "CLOUD", level: 0, category: "study" },
   { name: "DEVOPS", level: 0, category: "study" },
@@ -27,6 +27,7 @@ const skills = [
   { name: "SPRINGBOOT", level: 0, category: "study" },
   { name: "AIRTABLE", level: 0, category: "study" },
   { name: "N8N", level: 0, category: "study" },
+  { name: "IOT", level: 3, category: "study" },
 ];
 
 const categories = ["all", "frontend", "backend", "tools","study"];
