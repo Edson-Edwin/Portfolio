@@ -19,7 +19,7 @@ const skills = [
 
   // STUDY
   { name: "JAVA DSA", level: 0, category: "study" },
-  { name: "PYTHON AI", level: 5, category: "study" },
+  { name: "PYTHON AI", level: 6.2, category: "study" },
   { name: "REST API", level: 0, category: "study" },
   { name: "CLOUD", level: 0, category: "study" },
   { name: "DEVOPS", level: 0, category: "study" },
