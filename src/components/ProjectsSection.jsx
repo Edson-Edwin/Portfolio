@@ -22,11 +22,11 @@ const projects = [
   },
   {
     id: 3,
-    title: "E-commerce Platform",
+    title: "Smart Family Calender",
     description:
-      "Full-featured e-commerce platform with user authentication and payment processing.",
+      "A calender web and mobile app which can be used to mark important events and tasks for family members.",
     image: "/projects/project3.png",
-    tags: ["React", "Node.js", "Stripe"],
+    tags: ["React", "Django","Rest Framework"," PostgreSQL", "Flutter","AWS", "Docker"],
     demoUrl: "#",
     githubUrl: "#",
   },
