@@ -28,7 +28,7 @@ const skills = [
   { name: "AIRTABLE", level: 0, category: "study" },
   { name: "N8N", level: 0, category: "study" },
   { name: "IOT", level: 3, category: "study" },
-  { name: "Git", level: 69, category: "study" },
+  { name: "Git", level: 89, category: "study" },
 ];
 
 const categories = ["all", "frontend", "backend", "tools","study"];
